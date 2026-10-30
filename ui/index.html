@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="zh">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="reset-token" content="__RESET_TOKEN__">
+  <meta name="color-scheme" content="light">
+  <meta name="description" content="Reset 雷达：在 Magpie 关注 Codex、Claude、Kimi、Grok 的公开额度重置与官方动态。">
+  <title>Reset 雷达</title>
+  <link rel="icon" href="./icon.svg">
+  <link rel="stylesheet" href="./style.css">
+  <script src="./app.js" defer></script>
+</head>
+<body>
+  <main>
+    <header class="topbar">
+      <a class="brand" href="https://resetbell.dev/zh" target="_blank" rel="noopener noreferrer"><img src="./icon.svg" width="32" height="32" alt=""><span>Reset</span></a>
+      <div class="top-actions"><button id="share-plugin" class="quiet" data-i18n="sharePlugin">分享插件</button><button id="language" class="quiet" aria-label="Switch language">EN</button></div>
+    </header>
+    <section class="intro">
+      <div><p class="eyebrow" data-i18n="eyebrow">你的桌面，少一点等待</p><h1 data-i18n="headline">只盯住，你在用的那一家。</h1><p class="intro-copy" data-i18n="intro">公开额度重置、发卡与规则变化，留在 Magpie 里看。</p></div>
+      <span class="local-label"><span class="local-dot"></span><span data-i18n="local">持续关注</span></span>
+    </section>
+    <fieldset class="providers"><legend class="sr-only" data-i18n="choose">选择一家监控厂商</legend><div id="providers" class="provider-grid"></div></fieldset>
+    <section class="workspace">
+      <div class="signal-area">
+        <div class="radar" aria-hidden="true"><div class="cross"></div><div class="sweep"></div><div class="radar-core"></div><img id="radar-glyph" src="./icon.svg" alt=""><span class="signal-node"></span></div>
+        <div class="signal-caption"><span class="eyebrow" data-i18n="publicSignal">PUBLIC SIGNAL</span><h2 id="monitor-name">选择监控对象</h2><p id="monitor-copy">一次只关注一家，随时可以切换。</p></div>
+      </div>
+      <div class="monitor-details">
+        <div class="section-top"><span id="connection" class="badge neutral">等待选择</span><button id="refresh" class="quiet" disabled data-i18n="refresh">刷新动态 ↻</button></div>
+        <p class="metric-label" data-i18n="latestReset">最近公开额度重置 · 官方称完成</p><h2 id="latest-reset" class="latest-reset">—</h2><p id="reset-detail" class="secondary">选择厂商后读取真实公开记录</p>
+        <div class="health-line"><span data-i18n="sourceHealth">信息来源</span><strong id="source-health">—</strong></div>
+        <div class="health-line"><span data-i18n="lastSync">最近更新</span><time id="last-sync">—</time></div>
+        <div class="notification-row"><div><label for="notifications" data-i18n="notifications">系统提醒</label><p data-i18n="notificationHelp">仅提醒此后发现的近期变化，不补发历史。</p></div><input id="notifications" type="checkbox" role="switch" disabled></div>
+        <button id="test-notification" class="text-button" hidden data-i18n="testNotification">发送一条测试通知</button>
+      </div>
+    </section>
+    <div id="notice" class="notice" role="status" hidden></div>
+    <section class="activity">
+      <div class="section-top"><div><p class="eyebrow" data-i18n="feedEyebrow">THE LATEST, NOT THE NOISE</p><h2 data-i18n="feedTitle">公开动态</h2></div><a id="all-updates" href="https://resetbell.dev/zh/updates" target="_blank" rel="noopener noreferrer" data-i18n="viewAll">到网站查看 ↗</a></div>
+      <label class="search-field" for="search"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"></circle><path d="m16 16 5 5"></path></svg><span class="sr-only" data-i18n="searchLabel">搜索公开动态</span><input id="search" type="search" maxlength="200" autocomplete="off" placeholder="搜索动态或原文…"></label>
+      <p id="search-result" class="search-result" role="status" hidden></p>
+      <div id="feed" aria-live="polite"></div>
+    </section>
+    <footer><span data-i18n="disclaimer">公开公告 ≠ 个人额度到账。预告与第三方观测不计为官方完成。</span><span data-i18n="polling">每 60 秒同步 · 断网保留缓存</span></footer>
+  </main>
+</body>
+</html>

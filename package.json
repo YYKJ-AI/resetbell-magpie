@@ -1,0 +1,54 @@
+{
+  "name": "resetbell-magpie",
+  "version": "1.1.0",
+  "type": "module",
+  "description": "Reset 雷达 · Reset Radar for Magpie. Public quota resets and official updates for Codex, Claude, Kimi and Grok.",
+  "main": "./host.mjs",
+  "homepage": "https://resetbell.dev",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/YYKJ-AI/resetbell-magpie.git"
+  },
+  "keywords": [
+    "magpie-plugin",
+    "magpie",
+    "reset-radar",
+    "resetbell",
+    "codex",
+    "claude",
+    "kimi",
+    "grok",
+    "quota-reset",
+    "额度重置"
+  ],
+  "os": [
+    "darwin"
+  ],
+  "license": "SEE LICENSE IN LICENSE",
+  "magpie": {
+    "page": {
+      "title": "Reset Radar",
+      "titles": {
+        "zh": "Reset 雷达",
+        "zh-TW": "Reset 雷達"
+      },
+      "file": "page/index.html",
+      "icon": "page/icon.svg",
+      "service": {
+        "port": 38473
+      }
+    },
+    "permissions": [],
+    "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIiBmaWxsPSJub25lIj48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9InJpbmciIHgxPSIxMiIgeTE9Ijg1IiB4Mj0iODIiIHkyPSIxNSIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiPjxzdG9wIHN0b3AtY29sb3I9IiMwMDdkNzgiLz48c3RvcCBvZmZzZXQ9Ii40OCIgc3RvcC1jb2xvcj0iIzBlOWQ5MCIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI2I3ZWFkOSIvPjwvbGluZWFyR3JhZGllbnQ+PGxpbmVhckdyYWRpZW50IGlkPSJzY2FuIiB4MT0iMzUiIHkxPSIxMCIgeDI9IjcyIiB5Mj0iODYiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj48c3RvcCBzdG9wLWNvbG9yPSIjZDFmNGU4Ii8+PHN0b3Agb2Zmc2V0PSIuNDYiIHN0b3AtY29sb3I9IiM2OGM5YjQiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMwMDg2N2UiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cGF0aCBkPSJNNjQuNCAxNC45YTM4IDM4IDAgMSAwIDIwLjcgNDkuNWwtMTkuNS04YTE3IDE3IDAgMSAxLTkuMi0yMi4xeiIgZmlsbD0idXJsKCNyaW5nKSIvPjxwYXRoIGQ9Ik02NC40IDE0LjlhMzggMzggMCAwIDEgMjAuNyA0OS41bC0xOS41LThhMTcgMTcgMCAwIDAtOS4yLTIyLjF6IiBmaWxsPSJ1cmwoI3NjYW4pIi8+PGNpcmNsZSBjeD0iODYiIGN5PSIxNCIgcj0iNS4zIiBmaWxsPSIjMGQ5ZjhiIi8+PC9zdmc+Cg=="
+  },
+  "files": [
+    "host.mjs",
+    "page",
+    "ui",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "magpie": ">=0.1.2181"
+  }
+}
