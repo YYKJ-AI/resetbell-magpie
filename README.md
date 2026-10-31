@@ -4,8 +4,14 @@
 
 在 Magpie 里，关注你正在使用的 AI 厂商。
 
-Codex、Claude、Kimi、Grok，四选一关注公开额度重置、发卡与规则变化。
+GPT、Claude、Kimi、Grok，四选一关注公开额度重置、发卡与规则变化。
 无需注册，不读取个人账户，也不需要提供 API Key。
+
+## 界面预览
+
+![Reset 雷达桌面版](https://raw.githubusercontent.com/YYKJ-AI/resetbell-magpie/main/docs/screenshots/dashboard-zh-1200.png)
+
+![服务管理页](https://raw.githubusercontent.com/YYKJ-AI/resetbell-magpie/main/docs/screenshots/manage-zh-1200.png)
 
 ## 安装
 
@@ -30,12 +36,14 @@ magpie plugin add github:YYKJ-AI/resetbell-magpie
 
 ## 使用
 
-- **只关注一家**：随时切换 Codex、Claude、Kimi 或 Grok。
-- **快速查找**：搜索动态、适用范围和官方原文。
+- **只关注一家**：随时切换 GPT、Claude、Kimi 或 Grok；GPT 统一使用与网站相同的 ChatGPT 图标。
+- **服务管理**：主页点击「管理」进入二级页面，可查看四家厂商并随时切换当前关注。
+- **重置卡片**：显示距上次公开重置的实时相对时间、精确日期、近 30 天重置次数与逐日刻度。
+- **一眼看完**：宽屏左侧监控、右侧动态，桌面尽量在一页内完成查看；手机自动改为单列与 2×2 厂商选择。
+- **快速查找**：默认显示最新 4 条；按重置、发卡、规则变化筛选，再搜索动态、适用范围和官方原文，展示最新 4 条匹配结果；支持一键清除和 `/` 快捷搜索。
 - **可选提醒**：默认关闭；开启后，只提醒此后发现的近期变化，不补发历史。
-- **始终白色**：统一白色界面，沿用 Reset 网站的品牌标识。
+- **统一品牌**：交互使用 Reset 官网青绿主题色，背景与文字适配 Magpie 明暗模式，保留彩色厂商图标。
 - **离线可看**：连接中断时保留上次内容，并明确提示未更新。
-- **方便分享**：点右上角「分享插件」即可复制此页面链接。
 
 Magpie 运行时持续关注，关闭插件页面不影响监控；退出 Magpie 或电脑休眠时，
 首次安装的插件不能继续检查。重新打开后恢复。
@@ -59,6 +67,6 @@ macOS 是否显示提醒取决于系统通知权限和专注模式；
 
 Follow public AI quota resets and official updates inside Magpie.
 Install `github:YYKJ-AI/resetbell-magpie`, open **Reset Radar**, and choose
-Codex, Claude, Kimi or Grok. No login or personal API key required.
-Search updates and original posts, optionally enable notifications, and share
-the plugin with friends. macOS / Magpie 0.1.2181+.
+GPT, Claude, Kimi or Grok. No login or personal API key required.
+Manage four providers, view the latest four updates, filter and search original posts,
+and optionally enable notifications. macOS / Magpie 0.1.2181+.
