@@ -45,25 +45,29 @@
                 <span id="reset-timeline" class="reset-timeline" role="img" aria-label="近 30 天公开重置记录"></span>
               </a>
               <div class="notification-row">
-                <label class="notification-copy" for="notifications" data-i18n="notifications">macOS 通知</label>
+                <div class="notification-copy">
+                  <label for="notifications" data-i18n="notifications">macOS 通知</label>
+                  <small id="notification-status" role="status"></small>
+                </div>
                 <span id="notification-help" class="sr-only" data-i18n="notificationHelp">有新的公开动态时通知我</span>
-                <input id="notifications" type="checkbox" role="switch" aria-describedby="notification-help" disabled>
+                <input id="notifications" type="checkbox" role="switch" aria-describedby="notification-help notification-status" disabled>
               </div>
               <details class="source-details">
                 <summary><span data-i18n="sourceDetails">同步与通知</span><strong id="source-health">—</strong></summary>
                 <p id="source-note" data-i18n="sourcePending">选择厂商后显示来源状态</p>
                 <div class="sync-grid">
                   <div class="sync-row"><span data-i18n="lastSync">最近更新</span><time id="last-sync">—</time></div>
-                  <div class="sync-row"><span data-i18n="nextSync">下次检查</span><time id="next-sync">—</time></div>
+                  <div class="sync-row"><span id="next-sync-label" data-i18n="nextSync">下次检查</span><time id="next-sync">—</time></div>
                 </div>
                 <label class="refresh-control" for="refresh-rate"><span data-i18n="refreshRate">刷新频率</span>
-                  <select id="refresh-rate" aria-describedby="notification-limit">
+                  <select id="refresh-rate" aria-describedby="refresh-help" disabled>
                     <option value="120000" data-i18n="fastRefresh">较快 · 2 分钟</option>
                     <option value="300000" data-i18n="standardRefresh">标准 · 5 分钟</option>
                     <option value="900000" data-i18n="slowRefresh">省电 · 15 分钟</option>
                     <option value="0" data-i18n="manualRefresh">仅手动</option>
                   </select>
                 </label>
+                <p id="refresh-help" data-i18n="refreshHelp">仅调整本机检查频率，不改变上游采集速度；失败时延后重试，仅手动不自动检查或提醒。</p>
                 <p id="notification-limit" data-i18n="notificationLimit">通知只覆盖此后发现的近期公开动态，不补发历史；提交成功不代表已实收，macOS 权限或专注模式可能拦截显示。</p>
                 <button id="test-notification" class="text-button" hidden data-i18n="testNotification">测试提醒</button>
               </details>
@@ -89,6 +93,7 @@
           <h1 id="manage-title" data-i18n="manageTitle">管理关注的服务</h1>
           <p data-i18n="manageIntro">一次关注一家 AI 服务。切换后，公开动态、重置记录和来源状态会同步更新。</p>
         </header>
+        <p id="manage-error" class="manage-error" role="alert" hidden></p>
         <div id="manage-providers" class="manage-providers"></div>
         <p class="manage-note"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 4.5 6v5.5c0 4.7 3 7.7 7.5 9.5 4.5-1.8 7.5-4.8 7.5-9.5V6L12 3Z"></path><path d="m8.5 12 2.2 2.2 4.8-5"></path></svg><span data-i18n="manageNote">无需登录，不读取你的个人账户或额度。</span></p>
       </div>
