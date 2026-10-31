@@ -30,7 +30,7 @@
           <section id="workspace" class="panel current-panel" aria-busy="false">
             <div class="current-provider">
               <div class="provider-emblem"><img id="current-icon" src="./icon.svg" alt=""><span id="current-mark" class="current-mark" aria-hidden="true"></span></div>
-              <div class="current-copy"><span data-i18n="currentProvider">当前关注</span><h2 id="monitor-name">选择监控对象</h2></div>
+              <div class="current-copy"><h2 id="monitor-name">选择监控对象</h2></div>
               <div class="current-actions">
                 <button id="manage" class="row-action" type="button"><span data-i18n="change">更换</span><span aria-hidden="true">›</span></button>
                 <button id="refresh" class="row-action" type="button" disabled data-i18n="refresh">刷新</button>
@@ -49,35 +49,6 @@
                 <header class="recent-heading"><h3 id="recent-title" data-i18n="recentResets">已确认的公开重置</h3><a id="reset-history" href="https://resetbell.dev/zh/updates" target="_blank" rel="noopener noreferrer" data-i18n="viewAll">查看全部</a></header>
                 <div id="recent-resets" class="reset-records"></div>
               </section>
-              <div class="lower-dock">
-                <div class="notification-row">
-                  <div class="notification-copy">
-                    <label for="notifications" data-i18n="notifications">macOS 通知</label>
-                    <small id="notification-status" role="status"></small>
-                  </div>
-                  <span id="notification-help" class="sr-only" data-i18n="notificationHelp">有新的公开动态时通知我</span>
-                  <input id="notifications" type="checkbox" role="switch" aria-describedby="notification-help notification-status" disabled>
-                </div>
-                <details class="source-details">
-                  <summary><span data-i18n="sourceDetails">同步与通知</span><strong id="source-health">—</strong></summary>
-                  <p id="source-note" data-i18n="sourcePending">选择厂商后显示来源状态</p>
-                  <div class="sync-grid">
-                    <div class="sync-row"><span data-i18n="lastSync">最近更新</span><time id="last-sync">—</time></div>
-                    <div class="sync-row"><span id="next-sync-label" data-i18n="nextSync">下次检查</span><time id="next-sync">—</time></div>
-                  </div>
-                  <label class="refresh-control" for="refresh-rate"><span data-i18n="refreshRate">刷新频率</span>
-                    <select id="refresh-rate" aria-describedby="refresh-help" disabled>
-                      <option value="120000" data-i18n="fastRefresh">较快 · 2 分钟</option>
-                      <option value="300000" data-i18n="standardRefresh">标准 · 5 分钟</option>
-                      <option value="900000" data-i18n="slowRefresh">省电 · 15 分钟</option>
-                      <option value="0" data-i18n="manualRefresh">仅手动</option>
-                    </select>
-                  </label>
-                  <p id="refresh-help" data-i18n="refreshHelp">仅调整本机检查频率，不改变上游采集速度；失败时延后重试，仅手动不自动检查或提醒。</p>
-                  <p id="notification-limit" data-i18n="notificationLimit">通知只覆盖此后发现的近期公开动态，不补发历史；提交成功不代表已实收，macOS 权限或专注模式可能拦截显示。</p>
-                  <button id="test-notification" class="text-button" hidden data-i18n="testNotification">测试提醒</button>
-                </details>
-              </div>
             </div>
           </section>
         </aside>
@@ -97,8 +68,8 @@
       <div class="manage-shell panel">
         <button id="manage-back" class="back-button" type="button"><span aria-hidden="true">←</span><span data-i18n="back">返回</span></button>
         <header class="manage-heading">
-          <h1 id="manage-title" data-i18n="manageTitle">管理关注的服务</h1>
-          <p data-i18n="manageIntro">一次关注一家 AI 服务。切换后，公开动态、重置记录和来源状态会同步更新。</p>
+          <h1 id="manage-title" data-i18n="manageTitle">选择厂商</h1>
+          <p data-i18n="manageIntro">一次选择一家，随时切换。</p>
         </header>
         <p id="manage-error" class="manage-error" role="alert" hidden></p>
         <div id="manage-providers" class="manage-providers"></div>

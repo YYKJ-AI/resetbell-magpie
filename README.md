@@ -38,18 +38,17 @@ magpie plugin add github:YYKJ-AI/resetbell-magpie
 
 - **只关注一家**：随时切换 GPT、Claude、Kimi、Grok 或 DeepSeek；GPT 统一使用与网站相同的 ChatGPT 图标。
 - **服务管理**：主页点击「更换」进入二级页面；管理页是唯一厂商选择入口，切换成功后自动回到主页。
-- **一体监控**：当前关注、上次公开重置、近 30 天刻度和最近三条已确认公开重置集中展示；记录可展开适用范围与原文，预告、付费重置和第三方观测不计为公开完成。
-- **均衡布局**：桌面左右面板等高，最近记录填充左侧空间，通知与同步设置收在浅色底部区；记录较长时独立滚动，手机及短窗口自然纵向浏览。
-- **分类动态**：按重置、发卡、规则变化筛选，显示最新 4 条；保留适用范围、公告状态与官方原文入口。
-- **可选提醒**：默认关闭；开启后，只提醒此后发现的近期变化，不补发历史。通知提交成功不代表实收，macOS 权限或专注模式可能拦截显示。
+- **一体监控**：厂商品牌、上次公开重置、近 30 天刻度和最近五条已确认公开重置集中展示；记录可展开适用范围与原文，预告、付费重置和第三方观测不计为公开完成。
+- **精简布局**：品牌图标与名称居中对齐，左右面板标题统一字级和高度；移除通知与同步设置区，最近记录填充左侧空间。滚动条隐藏但仍可正常滚动，手机及短窗口自然纵向浏览。
+- **分类动态**：按重置、发卡、规则变化筛选，先筛选分类，再显示最近 5 条；保留适用范围、公告状态与官方原文入口。
 - **统一品牌**：交互使用 Reset 官网青绿主题色，背景与文字适配 Magpie 明暗模式，保留彩色厂商图标。
-- **可调刷新**：较快 2 分钟、标准 5 分钟（默认）、省电 15 分钟或仅手动；仅改变本机检查频率，不改变上游采集速度。失败时自动退避，服务端重试提示优先；仅手动不会自动检查或提醒。
+- **持续更新**：默认每 5 分钟检查，保留手动刷新；已有安装保留此前保存的检查频率。失败时自动退避，服务端重试提示优先；本机检查频率不改变上游采集速度。
 - **离线可看**：连接中断时保留上次内容，并明确提示未更新。
 
 Magpie 运行时持续关注，关闭插件页面不影响监控；退出 Magpie 或电脑休眠时，
 首次安装的插件不能继续检查。重新打开后恢复。
-macOS 是否显示提醒取决于系统通知权限和专注模式；
-开启后可展开「同步与通知」，使用「测试提醒」检查。系统接受不等于已送达。
+1.4.1 起界面不再提供通知、测试提醒或检查频率设置；既有后台偏好与兼容接口保留，
+更新不会自动修改通知开关或系统权限。
 
 公开公告不证明个人额度到账。预告、第三方观察与官方完成状态会分别展示。
 
@@ -69,7 +68,8 @@ macOS 是否显示提醒取决于系统通知权限和专注模式；
 Follow public AI quota resets and official updates inside Magpie.
 Install `github:YYKJ-AI/resetbell-magpie`, open **Reset Radar**, and choose
 GPT, Claude, Kimi, Grok or DeepSeek. No login or personal API key required.
-Manage five providers, view the latest four updates, filter by category and read original posts,
-review the latest three completed public resets with original evidence in a balanced monitoring panel,
-choose a 2/5/15-minute or manual refresh rate, and optionally enable notifications.
+Manage five providers, view the latest five updates, filter by category and read original posts,
+review the latest five completed public resets with original evidence in a balanced monitoring panel,
+and refresh manually or use automatic checks (every five minutes by default).
+The simplified interface has no notification or refresh-rate settings; existing background preferences are preserved.
 macOS / Magpie 0.1.2181+.
