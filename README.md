@@ -38,8 +38,8 @@ magpie plugin add github:YYKJ-AI/resetbell-magpie
 
 - **只关注一家**：随时切换 GPT、Claude、Kimi、Grok 或 DeepSeek；GPT 统一使用与网站相同的 ChatGPT 图标。
 - **服务管理**：主页点击「更换」进入二级页面；管理页是唯一厂商选择入口，切换成功后自动回到主页。
-- **合并卡片**：当前关注、上次公开重置和 macOS 通知集中在一张卡片；保留精确日期、近 30 天有重置的天数与逐日刻度，同步与通知详情按需展开。
-- **一眼看完**：宽屏左侧监控、右侧动态，桌面尽量在一页内完成查看；手机自动改为单列。
+- **一体监控**：当前关注、上次公开重置、近 30 天刻度和最近三条已确认公开重置集中展示；记录可展开适用范围与原文，预告、付费重置和第三方观测不计为公开完成。
+- **均衡布局**：桌面左右面板等高，最近记录填充左侧空间，通知与同步设置收在浅色底部区；记录较长时独立滚动，手机及短窗口自然纵向浏览。
 - **分类动态**：按重置、发卡、规则变化筛选，显示最新 4 条；保留适用范围、公告状态与官方原文入口。
 - **可选提醒**：默认关闭；开启后，只提醒此后发现的近期变化，不补发历史。通知提交成功不代表实收，macOS 权限或专注模式可能拦截显示。
 - **统一品牌**：交互使用 Reset 官网青绿主题色，背景与文字适配 Magpie 明暗模式，保留彩色厂商图标。
@@ -70,5 +70,6 @@ Follow public AI quota resets and official updates inside Magpie.
 Install `github:YYKJ-AI/resetbell-magpie`, open **Reset Radar**, and choose
 GPT, Claude, Kimi, Grok or DeepSeek. No login or personal API key required.
 Manage five providers, view the latest four updates, filter by category and read original posts,
+review the latest three completed public resets with original evidence in a balanced monitoring panel,
 choose a 2/5/15-minute or manual refresh rate, and optionally enable notifications.
 macOS / Magpie 0.1.2181+.

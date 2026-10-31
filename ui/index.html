@@ -43,34 +43,41 @@
                 <time id="latest-reset" class="reset-date">—</time>
                 <span class="reset-summary"><span><span data-i18n="resetRecent">近 30 天</span> <b id="reset-count">—</b> <span data-i18n="resetTimes">天有重置</span></span></span>
                 <span id="reset-timeline" class="reset-timeline" role="img" aria-label="近 30 天公开重置记录"></span>
+                <span class="timeline-endpoints" aria-hidden="true"><span id="timeline-start"></span><span id="timeline-end"></span></span>
               </a>
-              <div class="notification-row">
-                <div class="notification-copy">
-                  <label for="notifications" data-i18n="notifications">macOS 通知</label>
-                  <small id="notification-status" role="status"></small>
+              <section class="recent-section" aria-labelledby="recent-title">
+                <header class="recent-heading"><h3 id="recent-title" data-i18n="recentResets">已确认的公开重置</h3><a id="reset-history" href="https://resetbell.dev/zh/updates" target="_blank" rel="noopener noreferrer" data-i18n="viewAll">查看全部</a></header>
+                <div id="recent-resets" class="reset-records"></div>
+              </section>
+              <div class="lower-dock">
+                <div class="notification-row">
+                  <div class="notification-copy">
+                    <label for="notifications" data-i18n="notifications">macOS 通知</label>
+                    <small id="notification-status" role="status"></small>
+                  </div>
+                  <span id="notification-help" class="sr-only" data-i18n="notificationHelp">有新的公开动态时通知我</span>
+                  <input id="notifications" type="checkbox" role="switch" aria-describedby="notification-help notification-status" disabled>
                 </div>
-                <span id="notification-help" class="sr-only" data-i18n="notificationHelp">有新的公开动态时通知我</span>
-                <input id="notifications" type="checkbox" role="switch" aria-describedby="notification-help notification-status" disabled>
+                <details class="source-details">
+                  <summary><span data-i18n="sourceDetails">同步与通知</span><strong id="source-health">—</strong></summary>
+                  <p id="source-note" data-i18n="sourcePending">选择厂商后显示来源状态</p>
+                  <div class="sync-grid">
+                    <div class="sync-row"><span data-i18n="lastSync">最近更新</span><time id="last-sync">—</time></div>
+                    <div class="sync-row"><span id="next-sync-label" data-i18n="nextSync">下次检查</span><time id="next-sync">—</time></div>
+                  </div>
+                  <label class="refresh-control" for="refresh-rate"><span data-i18n="refreshRate">刷新频率</span>
+                    <select id="refresh-rate" aria-describedby="refresh-help" disabled>
+                      <option value="120000" data-i18n="fastRefresh">较快 · 2 分钟</option>
+                      <option value="300000" data-i18n="standardRefresh">标准 · 5 分钟</option>
+                      <option value="900000" data-i18n="slowRefresh">省电 · 15 分钟</option>
+                      <option value="0" data-i18n="manualRefresh">仅手动</option>
+                    </select>
+                  </label>
+                  <p id="refresh-help" data-i18n="refreshHelp">仅调整本机检查频率，不改变上游采集速度；失败时延后重试，仅手动不自动检查或提醒。</p>
+                  <p id="notification-limit" data-i18n="notificationLimit">通知只覆盖此后发现的近期公开动态，不补发历史；提交成功不代表已实收，macOS 权限或专注模式可能拦截显示。</p>
+                  <button id="test-notification" class="text-button" hidden data-i18n="testNotification">测试提醒</button>
+                </details>
               </div>
-              <details class="source-details">
-                <summary><span data-i18n="sourceDetails">同步与通知</span><strong id="source-health">—</strong></summary>
-                <p id="source-note" data-i18n="sourcePending">选择厂商后显示来源状态</p>
-                <div class="sync-grid">
-                  <div class="sync-row"><span data-i18n="lastSync">最近更新</span><time id="last-sync">—</time></div>
-                  <div class="sync-row"><span id="next-sync-label" data-i18n="nextSync">下次检查</span><time id="next-sync">—</time></div>
-                </div>
-                <label class="refresh-control" for="refresh-rate"><span data-i18n="refreshRate">刷新频率</span>
-                  <select id="refresh-rate" aria-describedby="refresh-help" disabled>
-                    <option value="120000" data-i18n="fastRefresh">较快 · 2 分钟</option>
-                    <option value="300000" data-i18n="standardRefresh">标准 · 5 分钟</option>
-                    <option value="900000" data-i18n="slowRefresh">省电 · 15 分钟</option>
-                    <option value="0" data-i18n="manualRefresh">仅手动</option>
-                  </select>
-                </label>
-                <p id="refresh-help" data-i18n="refreshHelp">仅调整本机检查频率，不改变上游采集速度；失败时延后重试，仅手动不自动检查或提醒。</p>
-                <p id="notification-limit" data-i18n="notificationLimit">通知只覆盖此后发现的近期公开动态，不补发历史；提交成功不代表已实收，macOS 权限或专注模式可能拦截显示。</p>
-                <button id="test-notification" class="text-button" hidden data-i18n="testNotification">测试提醒</button>
-              </details>
             </div>
           </section>
         </aside>
