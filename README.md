@@ -4,7 +4,7 @@
 
 在 Magpie 里，关注你正在使用的 AI 厂商。
 
-GPT、Claude、Kimi、Grok，四选一关注公开额度重置、发卡与规则变化。
+GPT、Claude、Kimi、Grok、DeepSeek，五选一关注公开额度重置、发卡与规则变化。
 无需注册，不读取个人账户，也不需要提供 API Key。
 
 ## 界面预览
@@ -36,19 +36,20 @@ magpie plugin add github:YYKJ-AI/resetbell-magpie
 
 ## 使用
 
-- **只关注一家**：随时切换 GPT、Claude、Kimi 或 Grok；GPT 统一使用与网站相同的 ChatGPT 图标。
-- **服务管理**：主页点击「管理」进入二级页面，可查看四家厂商并随时切换当前关注。
-- **重置卡片**：显示距上次公开重置的实时相对时间、精确日期、近 30 天重置次数与逐日刻度。
-- **一眼看完**：宽屏左侧监控、右侧动态，桌面尽量在一页内完成查看；手机自动改为单列与 2×2 厂商选择。
-- **快速查找**：默认显示最新 4 条；按重置、发卡、规则变化筛选，再搜索动态、适用范围和官方原文，展示最新 4 条匹配结果；支持一键清除和 `/` 快捷搜索。
-- **可选提醒**：默认关闭；开启后，只提醒此后发现的近期变化，不补发历史。
+- **只关注一家**：随时切换 GPT、Claude、Kimi、Grok 或 DeepSeek；GPT 统一使用与网站相同的 ChatGPT 图标。
+- **服务管理**：主页点击「更换」进入二级页面；管理页是唯一厂商选择入口，切换成功后自动回到主页。
+- **合并卡片**：当前关注、上次公开重置和 macOS 通知集中在一张卡片；保留精确日期、近 30 天有重置的天数与逐日刻度，同步与通知详情按需展开。
+- **一眼看完**：宽屏左侧监控、右侧动态，桌面尽量在一页内完成查看；手机自动改为单列。
+- **分类动态**：按重置、发卡、规则变化筛选，显示最新 4 条；保留适用范围、公告状态与官方原文入口。
+- **可选提醒**：默认关闭；开启后，只提醒此后发现的近期变化，不补发历史。通知提交成功不代表实收，macOS 权限或专注模式可能拦截显示。
 - **统一品牌**：交互使用 Reset 官网青绿主题色，背景与文字适配 Magpie 明暗模式，保留彩色厂商图标。
+- **可调刷新**：较快 2 分钟、标准 5 分钟、省电 15 分钟或仅手动；失败时自动退避，服务端重试提示优先。
 - **离线可看**：连接中断时保留上次内容，并明确提示未更新。
 
 Magpie 运行时持续关注，关闭插件页面不影响监控；退出 Magpie 或电脑休眠时，
 首次安装的插件不能继续检查。重新打开后恢复。
 macOS 是否显示提醒取决于系统通知权限和专注模式；
-可用「发送一条测试通知」检查。系统接受不等于已送达。
+开启后可展开「同步与通知」，使用「测试提醒」检查。系统接受不等于已送达。
 
 公开公告不证明个人额度到账。预告、第三方观察与官方完成状态会分别展示。
 
@@ -67,6 +68,7 @@ macOS 是否显示提醒取决于系统通知权限和专注模式；
 
 Follow public AI quota resets and official updates inside Magpie.
 Install `github:YYKJ-AI/resetbell-magpie`, open **Reset Radar**, and choose
-GPT, Claude, Kimi or Grok. No login or personal API key required.
-Manage four providers, view the latest four updates, filter and search original posts,
-and optionally enable notifications. macOS / Magpie 0.1.2181+.
+GPT, Claude, Kimi, Grok or DeepSeek. No login or personal API key required.
+Manage five providers, view the latest four updates, filter by category and read original posts,
+choose a 2/5/15-minute or manual refresh rate, and optionally enable notifications.
+macOS / Magpie 0.1.2181+.
