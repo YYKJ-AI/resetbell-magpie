@@ -33,7 +33,14 @@
               <div class="current-copy"><h2 id="monitor-name">选择监控对象</h2></div>
               <div class="current-actions">
                 <button id="manage" class="row-action" type="button"><span data-i18n="change">更换</span><span aria-hidden="true">›</span></button>
-                <button id="refresh" class="row-action" type="button" disabled data-i18n="refresh">刷新</button>
+                <button id="refresh" class="row-action refresh-action" type="button" disabled aria-live="polite">
+                  <span class="refresh-glyph" aria-hidden="true">
+                    <svg class="refresh-arrows" viewBox="0 0 24 24"><path d="M20 11a8 8 0 0 0-14.5-4.5L4 8"></path><path d="M4 3v5h5"></path><path d="M4 13a8 8 0 0 0 14.5 4.5L20 16"></path><path d="M20 21v-5h-5"></path></svg>
+                    <svg class="refresh-check" viewBox="0 0 24 24"><path d="m5 12 4.2 4.2L19 6.5"></path></svg>
+                    <svg class="refresh-alert" viewBox="0 0 24 24"><path d="M12 6.5v7"></path><path d="M12 18h.01"></path></svg>
+                  </span>
+                  <span id="refresh-label" data-i18n="refresh">刷新</span>
+                </button>
               </div>
             </div>
             <div class="current-details">
