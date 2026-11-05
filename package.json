@@ -1,8 +1,8 @@
 {
   "name": "resetbell-magpie",
-  "version": "1.4.4",
+  "version": "1.4.5",
   "type": "module",
-  "description": "Reset 雷达 · Reset Radar for Magpie. Monitor GPT, Claude, Kimi, Grok and DeepSeek public quota resets and official updates.",
+  "description": "Reset 雷达 · Reset Radar for Magpie. Monitor public quota and usage changes for GPT, Claude, Kimi, Grok and DeepSeek.",
   "main": "./host.mjs",
   "homepage": "https://resetbell.dev",
   "repository": {

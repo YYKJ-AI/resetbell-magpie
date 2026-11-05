@@ -40,7 +40,7 @@ magpie plugin add github:YYKJ-AI/resetbell-magpie
 - **服务管理**：主页点击「更换」进入二级页面；管理页是唯一厂商选择入口，切换成功后自动回到主页。
 - **一体监控**：厂商品牌、上次公开重置、近 30 天刻度和最近五条已确认公开重置集中展示；记录可展开适用范围与原文，预告、付费重置和第三方观测不计为公开完成。
 - **精简布局**：品牌图标与名称居中对齐，左右面板标题统一字级和高度；移除通知与同步设置区，最近记录填充左侧空间。滚动条隐藏但仍可正常滚动，手机及短窗口自然纵向浏览。
-- **分类动态**：按重置、发卡、规则变化筛选，先筛选分类，再显示最近 5 条；保留适用范围、公告状态与官方原文入口。
+- **分类变化**：按额度重置、额度权益、规则变化筛选，先筛选类型，再显示最近 5 条；保留适用范围、状态与原文入口，不展示模型发布新闻。
 - **统一品牌**：交互使用 Reset 官网青绿主题色，背景与文字适配 Magpie 明暗模式，保留彩色厂商图标。
 - **持续更新**：默认每 5 分钟检查，保留手动刷新；已有安装保留此前保存的检查频率。失败时自动退避，服务端重试提示优先；本机检查频率不改变上游采集速度。
 - **离线可看**：连接中断时保留上次内容，并明确提示未更新。
@@ -65,7 +65,7 @@ Magpie 运行时持续关注，关闭插件页面不影响监控；退出 Magpie
 
 ---
 
-Follow public AI quota resets and official updates inside Magpie.
+Follow public AI quota and usage changes inside Magpie; model launch news is excluded.
 Install `github:YYKJ-AI/resetbell-magpie`, open **Reset Radar**, and choose
 GPT, Claude, Kimi, Grok or DeepSeek. No login or personal API key required.
 Manage five providers, view the latest five updates, filter by category and read original posts,
