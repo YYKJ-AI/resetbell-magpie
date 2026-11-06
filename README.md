@@ -7,6 +7,9 @@
 GPT、Claude、Kimi、Grok、DeepSeek，五选一关注公开额度重置、发卡与规则变化。
 无需注册，不读取个人账户，也不需要提供 API Key。
 
+显示最近已收录且核验通过的重置／发卡公告；没有记录不代表从未发生。
+官方文档权益展示核对时间、适用条件和证据，不当成一次新发卡，也不补发历史提醒。
+
 ## 界面预览
 
 ![Reset 雷达桌面版](https://raw.githubusercontent.com/YYKJ-AI/resetbell-magpie/main/docs/screenshots/dashboard-zh-1200.png)
